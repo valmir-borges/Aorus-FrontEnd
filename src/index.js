@@ -5,27 +5,23 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Login from './Login';
 import Cadastro from "./Cadastro"
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import Filmes from './Filmes'
 
 //Mudando o tema dos componentes do material UI
 const theme = createTheme({
   //aqui dentro vai ter cor primária, secundária e etc
   palette: {
-    mode: 'dark',
+    mode: 'light',
     primary: {
-      main: '#000000',
-      dakr: '#e50914',
+      main: '#BD0B08',
     },
     secondary: {
-      main: '#e50914',
+      main: '#660025',
     },
-    background: {
-      default: '#000000',
-      paper: '#ffffff',
-    },
-    text: {
-      primary: 'rgba(255,255,255,0.87)',
-      secondary: 'rgba(255,255,255,0.6)',
-    },
+    background:{
+      default: '#1e1e1e',
+      paper:'#fff'
+    }
   },
 })
 
@@ -42,6 +38,10 @@ const router = createBrowserRouter(
     {
       path: '/Cadastro',
       element: <Cadastro/>
+    },
+    {
+      path: '/Filmes',
+      element: <Filmes/>
     }
   ]
 )

@@ -36,12 +36,10 @@ function Cadastro() {
     .then((json) => {
       if (json.cpf)//Se a resposta do json tiver um cpf quer dizer que o cadastro foi bem sucedido
       {
-        setErro(false)
         setCadastro(true)
       }
       else{//Caso contrário, não foi aceito o cadastrado, portanto dará um erro
         setErro(true);
-        setCadastro(false);
       }
     })
     .catch((erro) => { setErro(true)})
@@ -61,7 +59,7 @@ function Cadastro() {
 
   return (
     <>
-    <Container component="section" maxWidth="xs">
+    <Container component="section" maxWidth="sx">
         <Box sx={{
           mt: 10, 
           padding: "40px", 
@@ -69,12 +67,11 @@ function Cadastro() {
           boxShadow: "2px", 
           display:"flex", 
           flexDirection:"column", 
-          alignItems:"center", 
-          background:"rgba(0,0,0,.75)"}}
+          alignItems:"center"}}
           >
-          <Typography component="h1" variant='h5' color="#fff">Cadastro</Typography>
+          <Typography component="h1" variant='h5'>Cadastro</Typography>
           {erro && (<Alert severity='warning' sx={{mt:2, mb:2}}>Desculpe tente novamente</Alert>) /* Se a variável erro for true, ou seja, deu um erro, portanto será dado um alerta*/}
-          {cadastro && (<Alert severity="success">Você foi cadastro com sucesso</Alert>) /*se a variável cadastro for true, ou seja, o cadastro foi realizado com sucesso, portanto será dado um alerta*/}
+          {cadastro && (<Alert severity="info">Você foi cadastro com sucesso</Alert>) /*se a variável cadastro for true, ou seja, o cadastro foi realizado com sucesso, portanto será dado um alerta*/}
           <Box component="form" onSubmit={Cadastrar} /*Quando clicar no botão para enviar o formulário irá chamar essa função*/>
             <TextField 
             label="Nome Completo" 

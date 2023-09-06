@@ -44,7 +44,7 @@ function Login() {
   function Autenticar(evento){
     evento.preventDefault();
 
-    fetch("https://api.escuelajs.co/api/v1/auth/login",//O fetch manda uma requisição para url digitada, futuramente será o link do banco de dados feitos por nós
+    fetch("http://10.139.75.32:8080/login",//O fetch manda uma requisição para url digitada, futuramente será o link do banco de dados feitos por nós
     {method: "Post",//A requisição irá ser do método post, ou seja, por baixo dos panos (Existe 5 métodos de requisição)
     headers: {
       'Content-Type': 'application/json'
@@ -52,22 +52,22 @@ function Login() {
     body: JSON.stringify(//O corpo da requisição será essa
       {
         email: email,//No banco de dados estará campos chamados email que neles será procurado o que está dentro da variável email
-        password: senha//No banco de dados estará campos chamados password que neles será procurado o que está dentro da variável senha
+        senha: senha//No banco de dados estará campos chamados password que neles será procurado o que está dentro da variável senha
       }
     )})
     .then((resposta) => resposta.json())//Então se tudo deu certo pega a resposta e transforma em JSON
     .then((json) => {
-      if (json.statusCode === 401){//Se o número que o banco de dados retornar, ou seja, o statusCode for igual a 401, quer dizer que não foi encontrado esses dados no banco de dados, 401 é o número específico que diz que não está autorizado        setLogin(false);
-        setErro(true)//Se satisfazer a condição quer dizer que não foi autorizado, ou seja, o setErro será true, e dará erro ao fazer o login
+      if (json.user){//Se a resposta do json vier com um número de usuário quer dizer que este usuário exste, portanto o login será liberado, e o setlogin será true
+        setLogin(true)
       } else {
-        setLogin(true);//Caso contrário, quer dizer que o login foi autorizado, logo o setLogin será true
+        setErro(true);//Caso contrário, quer dizer que o login não foi autorizado e o setErro será true
       }
     })
     .catch((erro) => { setErro(true)})//Qualquer tipo de erro irá cair no cath
   }
 
   return (
-      <Container component="section" maxWidth="xs">
+      <Container component="section" maxWidth="sx">
         <Box sx={{mt: 10, padding: "40px", borderRadius: "10px", boxShadow: "2px", display:"flex", flexDirection:"column", alignItems:"center"}}>
           <Typography component="h1" variant='h5'>Entrar</Typography>
           {erro && (<Alert severity='warning'>Revise seus dados e tente novamente</Alert>) }
