@@ -1,4 +1,4 @@
-import { Box, Button, Checkbox, Container, FormControl, FormControlLabel, Grid, TextField, Typography } from '@mui/material'
+import { Alert, Box, Button, Checkbox, Container, FormControl, FormControlLabel, Grid, TextField, Typography } from '@mui/material'
 import React from 'react'
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { useState, useEffect } from 'react';
@@ -63,14 +63,14 @@ function Login() {
         setLogin(true);//Caso contrário, quer dizer que o login foi autorizado, logo o setLogin será true
       }
     })
-    .catch((erro) => { setErro(true)})
+    .catch((erro) => { setErro(true)})//Qualquer tipo de erro irá cair no cath
   }
 
   return (
-    <ThemeProvider theme={theme} >
       <Container component="section" maxWidth="xs">
         <Box sx={{mt: 10, padding: "40px", borderRadius: "10px", boxShadow: "2px", display:"flex", flexDirection:"column", alignItems:"center"}}>
           <Typography component="h1" variant='h5'>Entrar</Typography>
+          {erro && (<Alert severity='warning'>Revise seus dados e tente novamente</Alert>) }
           <Box component="form" onSubmit={Autenticar}>
             <TextField 
             label="Email" 
@@ -106,7 +106,6 @@ function Login() {
           </Box>
         </Box>
       </Container>
-    </ThemeProvider>
   )
 }
 
