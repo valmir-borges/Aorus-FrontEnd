@@ -18,7 +18,7 @@ function Cadastro() {
   function Cadastrar(e){
     e.preventDefault();
 
-    fetch("http://10.139.75.32:8080/users",//O fetch manda uma requisição para url digitada, futuramente será o link do banco de dados feitos por nós
+    fetch( process.env.REACT_APP_BACKEND + "users",//O fetch manda uma requisição para url digitada, futuramente será o link do banco de dados feitos por nós
     {method: "Post",//A requisição irá ser do método post, ou seja, por baixo dos panos (Existe 5 métodos de requisição)
     headers: {
       'Content-Type': 'application/json'
@@ -59,7 +59,7 @@ function Cadastro() {
 
   return (
     <>
-    <Container component="section" maxWidth="sx">
+    <Container component="section" maxWidth="xs">
         <Box sx={{
           mt: 10, 
           padding: "40px", 

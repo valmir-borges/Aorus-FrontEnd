@@ -13,8 +13,7 @@ function Filmes() {
   const [ duracao , setDuracao]=useState("");
   const [ categoria , setCategoria]=useState("");
   const [ capa , setCapa]=useState("");
-  const options = [ "Terror", "Drama", "Comédia"]
-    
+  const options = [ "Terror", "Drama", "Comédia"];    
 
   const [value, setValue] = useState(options[0]);
   const [inputValue, setInputValue] = React.useState('');
@@ -24,7 +23,7 @@ function Filmes() {
 
   function Cadastrar(e){
     e.preventDefault();
-    fetch("http://10.139.75.32:8080/filmes",//O fetch manda uma requisição para url digitada, futuramente será o link do banco de dados feitos por nós
+    fetch( process.env.REACT_APP_BACKEND + "filmes",//O fetch manda uma requisição para url digitada, futuramente será o link do banco de dados feitos por nós
     {method: "Post",//A requisição irá ser do método post, ou seja, por baixo dos panos (Existe 5 métodos de requisição)
     headers: {
       'Content-Type': 'application/json'
@@ -36,17 +35,19 @@ function Filmes() {
         ano: ano,
         duracao: duracao,
         categoria: inputValue,
-        capa:capa
+        imagem: capa
       }
     )})
     .then((resposta) => resposta.json())//Então se tudo deu certo pega a resposta e transforma em JSON
     .then((json) => {
-      if (json.titulo)//Se a resposta do json tiver um cpf quer dizer que o cadastro foi bem sucedido
+      if (json._id)//Se a resposta do json tiver um id quer dizer que o cadastro foi bem sucedido
       {
         setCadastrado(true)
+        setErro(false)
       }
       else{//Caso contrário, não foi aceito o cadastrado, portanto dará um erro
         setErro(true);
+        setCadastrado(false)
       }
     })
     .catch((erro) => { setErro(true)})
@@ -60,13 +61,10 @@ function Filmes() {
         setDuracao("")
         setCategoria("")
         setCapa("")
-      setCadastrado(false);
     },[cadastrado])
   return (
     <>
-    <Container component="section" maxWidth="sx">
-    {erro && (<Alert severity='warning' sx={{mt:2, mb:2}}>Desculpe tente novamente</Alert>) /* Se a variável erro for true, ou seja, deu um erro, portanto será dado um alerta*/}
-    {cadastrado && (<Alert severity="info">Seu filme foi cadastrado com sucesso</Alert>) /*se a variável cadastro for true, ou seja, o cadastro foi realizado com sucesso, portanto será dado um alerta*/}
+    <Container component="section" maxWidth="xs">
         <Box sx={{
           mt: 10, 
           padding: "40px", 
@@ -76,6 +74,8 @@ function Filmes() {
           flexDirection:"column", 
           alignItems:"center"}}
           >
+          {erro && (<Alert severity='warning' sx={{mt:2, mb:2}}>Desculpe tente novamente</Alert>) /* Se a variável erro for true, ou seja, deu um erro, portanto será dado um alerta*/}
+          {cadastrado && (<Alert severity="success">Seu filme foi cadastrado com sucesso</Alert>) /*se a variável cadastro for true, ou seja, o cadastro foi realizado com sucesso, portanto será dado um alerta*/}
           <Typography component="h1" variant='h5'>Cadastre seu filme</Typography>
           <Box component="form" onSubmit={Cadastrar} /*Quando clicar no botão para enviar o formulário irá chamar essa função*/>
             <TextField 
@@ -125,9 +125,9 @@ function Filmes() {
             }}
             id="controllable-states-demo"
             options={options}
-            renderInput={(params) => <TextField {...params} label="Controllable" variant='filled' 
+            renderInput={(params) => <TextField {...params} label="Categoria" variant='filled' 
             />}
-      />
+            />
             <TextField 
             label="Capa do filme" 
             variant='filled' 
