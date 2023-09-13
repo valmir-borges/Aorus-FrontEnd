@@ -1,0 +1,21 @@
+header {
+    background-color: black;
+    padding: 1.5rem 10rem;
+    align-items: center;
+}
+.divmain{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.menuleft {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.products{
+    font-size: 1.5rem;
+}
