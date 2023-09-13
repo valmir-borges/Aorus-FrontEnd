@@ -6,6 +6,7 @@ import Login from './Login';
 import Cadastro from "./Cadastro"
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Filmes from './Filmes'
+import EditaFilme from './EditaFilme';
 
 //Mudando o tema dos componentes do material UI
 const theme = createTheme({
@@ -42,6 +43,10 @@ const router = createBrowserRouter(
     {
       path: '/Filmes',
       element: <Filmes/>
+    },
+    {
+      path: '/edicao/:id',
+      element: <EditaFilme/>
     }
   ]
 )
