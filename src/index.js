@@ -10,6 +10,9 @@ import EditaFilme from './EditaFilme';
 import Home from './Home'
 import Header from './Header';
 import Loginaorus from './Loginaorus';
+import Cadastroaorus from './Cadastroaorus'
+import Placa from './Placa';
+import Catalogo from './Catalogo';
 
 //Mudando o tema dos componentes do material UI
 const theme = createTheme({
@@ -27,7 +30,7 @@ const theme = createTheme({
       paper:'#fff'
     },
     text: {
-      primary: 'rgba(255,255,255,0)',
+      primary: '#ffff',
       secondary: 'rgba(255,255,255,0.6)',    },
   },
 })
@@ -65,6 +68,18 @@ const router = createBrowserRouter(
     {
       path: 'Loginaorus',
       element: <Loginaorus/>
+    },
+    {
+      path: 'Cadastroaorus',
+      element: <Cadastroaorus/>
+    },
+    {
+      path: 'Placa',
+      element: <Placa/>
+    },
+    {
+      path: 'Catalogo',
+      element: <Catalogo/>
     }
   ]
 )

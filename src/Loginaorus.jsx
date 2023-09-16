@@ -1,11 +1,11 @@
 import React from 'react'
-import { Alert, Box, Button, Checkbox, Container, FormControl, FormControlLabel, Grid, TextField, Typography } from '@mui/material'
+import { Alert, Box, Button, Checkbox, Container, FormControl, FormControlLabel, Grid, TextField, Typography, Link } from '@mui/material'
 import { useState, useEffect } from 'react';
 import { Navigate, json, useNavigate } from 'react-router-dom';
 import Header from './Header';
 import fundologin from './img/backgroundlogin.jpg';
 import Style from './css/login.module.css'
-
+import user from './img/user.png'
 
 function Loginaorus() {
   return (
@@ -42,7 +42,7 @@ function Loginaorus() {
                 Esqueci a senha
               </Grid>
               <Grid item>
-                Cadastrar
+                  <Link href={"cadastroaorus"}>Cadastre-se</Link>
               </Grid>
             </Grid>
           </Box>

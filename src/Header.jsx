@@ -3,6 +3,7 @@ import Style from './css/header.module.css'
 import logoescrito from './img/logo aorus.png'
 import logodesenho from './img/somente logo.png'
 import user from './img/user.png'
+import { Link } from '@mui/material'
 
 function Header() {
 
@@ -10,13 +11,11 @@ function Header() {
     <>
     <header className={Style.header}>
         <section className={Style.secaoesquerda}>
-            <img className={Style.logoescrito} src={logoescrito} alt=""/>
+            <Link href={"Home"}><img className={Style.logoescrito} src={logoescrito} alt=""/></Link>
             <a href=""><span className={Style.produtos}>Products</span></a>
         </section>
         <section className={Style.secaodireita}>
-        <button type='submit' className={Style.btnuser}>
-                <img src={user} alt="" />
-            </button>
+        <Link href={"loginaorus"}><img src={user} alt="" /></Link>
             <img src={logodesenho} alt="" className={Style.logodesenho}/>
         </section>
     </header>
