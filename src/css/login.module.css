@@ -1,0 +1,9 @@
+.fundologin {
+    background-image: url("../img/backgroundlogin.jpg");
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

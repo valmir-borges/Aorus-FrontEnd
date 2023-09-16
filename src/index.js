@@ -8,6 +8,8 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Filmes from './Filmes'
 import EditaFilme from './EditaFilme';
 import Home from './Home'
+import Header from './Header';
+import Loginaorus from './Loginaorus';
 
 //Mudando o tema dos componentes do material UI
 const theme = createTheme({
@@ -15,7 +17,7 @@ const theme = createTheme({
   palette: {
     mode: 'light',
     primary: {
-      main: '#BD0B08',
+      main: '#FF6400',
     },
     secondary: {
       main: '#660025',
@@ -23,7 +25,10 @@ const theme = createTheme({
     background:{
       default: '#1e1e1e',
       paper:'#fff'
-    }
+    },
+    text: {
+      primary: 'rgba(255,255,255,0)',
+      secondary: 'rgba(255,255,255,0.6)',    },
   },
 })
 
@@ -52,6 +57,14 @@ const router = createBrowserRouter(
     {
       path: 'Home',
       element: <Home/>
+    },
+    {
+      path: 'Header',
+      element: <Header/>
+    },
+    {
+      path: 'Loginaorus',
+      element: <Loginaorus/>
     }
   ]
 )

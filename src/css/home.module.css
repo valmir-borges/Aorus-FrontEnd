@@ -1,0 +1,10 @@
+body {
+    background-color: black;
+}
+.banner {
+    display: block;
+    margin: 0 auto;
+}
+.divbanner {
+    margin-top: 1rem;
+}
