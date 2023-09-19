@@ -4,7 +4,18 @@ body {
 .banner {
     display: block;
     margin: 0 auto;
+    width: 80vw;
 }
 .divbanner {
     margin-top: 1rem;
+}
+@media screen and (max-width: 1024px){
+    .banner{
+        width: 100vw;
+    }
+}
+@media screen and (max-width: 425px){
+    .banner{
+        width: 100vw;
+    }
 }

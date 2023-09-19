@@ -1,23 +1,32 @@
-.header {
+.nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: black;
     flex-direction: row;
-    padding-left: 10rem;
-    padding-right: 10rem;
+    padding-left: 9rem;
+    padding-right: 9rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
+}
+.header{
+    display: flex;
+    flex-direction: column;
     border-bottom: 2px solid #FF6400;
 }
 .logoescrito{
-    height: 4rem;
+    height: 5rem;
 }
 .secaoesquerda{
     display: flex;
     align-items: center;
     flex-direction: row;
-    gap: 2rem;
+    gap: 1rem;
+}
+.linknone {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
 }
 .logodesenho {
     height: 4rem;
@@ -45,98 +54,118 @@ header section a span:hover {
     border-radius: 5px;
     cursor: pointer;
 }
-@media screen and (max-width: 1024px){
-    .header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        background-color: black;
-        flex-direction: row;
-        padding-left: 5rem;
-        padding-right: 5rem;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-        border-bottom: 2px solid #FF6400;
-    }
+.navmobile{
+    display: block;
+    margin-bottom: 1rem;
+    text-align: center;
 }
-@media screen and (max-width: 768px){
-    .header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        background-color: black;
-        flex-direction: row;
-        padding-left: 5rem;
-        padding-right: 5rem;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-        border-bottom: 2px solid #FF6400;
+.mobilemenu{
+    gap: 5rem;
+}
+.homemobile{
+    display: none;
+}
+
+@media screen and (max-width: 1440px    ){
+    .nav {
+        padding-left: 6rem;
+        padding-right: 6rem;
     }
-    .logodesenho {
-        height: 3.5rem;
+    .secaoesquerda
+    {
+        gap: 1.5rem;
     }
-    .logoescrito{
-        height: 3.5rem;
+    .secaodireita{
+        gap: 1.5rem;
     }
-    .produtos {
+    .proutos{
         font-size: 1rem;
     }
+    .linknone{
+        gap: 1.3rem;
+    }
 }
-@media screen and (max-width: 425px){
-    .header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        background-color: black;
-        flex-direction: row;
-        padding-left: 1.8rem;
-        padding-right: 1.8rem;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-        border-bottom: 2px solid #FF6400;
+@media screen and (max-width: 1024px    ){
+    .nav {
+        padding-left: 6rem;
+        padding-right: 6rem;
     }
-    .logodesenho {
-        display: none;    
+    .homemobile{
+        display: block;
     }
-    .logoescrito{
-        height: 3.5rem;
+    .linknone{
+        display: none;
     }
-    .produtos {
+    .homemobile{
+        font-size: 1.2rem;
+    }
+    .navmobile{
+        font-size: 1.2rem;
+    }
+    header div a span:hover {
+        transition-timing-function: ease;
+        transition-duration: 0.7s;
+        color: #FF6400;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}
+@media screen and (max-width: 768px    ){
+    .nav {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+    .logodesenho{
+        display: none;
+    }
+    .homemobile{
+        display: block;
+    }
+    .linknone{
+        display: none;
+    }
+    .homemobile{
+        font-size: 1.2rem;
+    }
+    .navmobile{
+        font-size: 1.2rem;
+    }
+    header div a span:hover {
+        transition-timing-function: ease;
+        transition-duration: 0.7s;
+        color: #FF6400;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}
+@media screen and (max-width: 425px    ){
+    .nav {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .logodesenho{
+        display: none;
+    }
+    .homemobile{
+        display: block;
+    }
+    .linknone{
+        display: none;
+    }
+    .homemobile{
         font-size: 1rem;
     }
-    .secaoesquerda{
-        display: flex;
-        align-items: center;
-        flex-direction: row;
-        gap: 0.5rem;
+    .navmobile{
+        font-size: 1rem;
     }
-}
-@media screen and (max-width: 375px){
-    .header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        background-color: black;
-        flex-direction: row;
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-        border-bottom: 2px solid #FF6400;
-    }
-    .logodesenho {
-        display: none;    
-    }
-    .logoescrito{
-        height: 3.5rem;
-    }
-    .produtos {
-        font-size: 0.9rem;
+    header div a span:hover {
+        transition-timing-function: ease;
+        transition-duration: 0.7s;
+        color: #FF6400;
+        border-radius: 5px;
+        cursor: pointer;
     }
     .secaoesquerda{
-        display: flex;
-        align-items: center;
-        flex-direction: row;
         gap: 0.5rem;
     }
 }
