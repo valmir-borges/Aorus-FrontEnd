@@ -3,7 +3,6 @@ import { Alert, Box, Button, Checkbox, Container, FormControl, FormControlLabel,
 import { useState, useEffect } from 'react';
 import { Navigate, json, useNavigate } from 'react-router-dom';
 import Header from './Header';
-import fundologin from './img/backgroundlogin.jpg';
 import Style from './css/login.module.css'
 
 

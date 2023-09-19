@@ -1,6 +1,5 @@
 import { Box, CardMedia, Container, Typography } from '@mui/material'
 import React from 'react'
-import banner from './img/banner 1.png'
 import Header from './Header'
 import logo from './img/logo aorus.png'
 import Style from './css/home.module.css'
@@ -9,7 +8,7 @@ import placa2 from './img/placa2.png'
 import placa3 from './img/placa3.png'
 import placa4 from './img/placa4.png'
 import './css/global.css'
-import bannerr from './img/teste.jpg'
+import bannerr from './img/bannerhome.jpg'
 
 function Home() {
   return (

@@ -1,8 +1,8 @@
 .fundologin {
-    background-image: url("../img/backgroundlogin.jpg");
+    background-image: url("../img/imglogin3.jpg");
     background-repeat: no-repeat;
-    width: 100vw;
-    height: 89vh;
+    width: 99vw;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
