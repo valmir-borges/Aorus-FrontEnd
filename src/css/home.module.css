@@ -1,21 +1,322 @@
 body {
     background-color: black;
 }
-.banner {
-    display: block;
-    margin: 0 auto;
-    width: 80vw;
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-top: 1.5rem;
 }
-.divbanner {
-    margin-top: 1rem;
+.containerimg {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    justify-content: space-evenly;
+}
+.containerspan1{
+    text-align: center;
+}
+.spanbanner1{
+    font-size: 3.5rem;
+    color: #FF6400;
+}
+.spanbanner2{
+    font-size: 2rem;
+    color: #c4c4c4;
+}
+.containerspan2{
+    text-align: center;
+}
+.fotoplaca{
+    width: 250px;
+    height: 250px;
+}
+.boxbanner{
+    display: inline-block;
+    position: relative  ;
+}
+.boxbanner .span1banner {
+    position: absolute;
+    top: 30vh;
+    left: 10rem;
+    font-size: 2.4vw;
+    color: black;
+    line-height: 2.8vw;
+}
+.bannerimg {
+    width: 99vw;    
+}
+.boxbanner .span2banner {
+    position: absolute;
+    width: 20%;
+    top: 36vh;
+    left: 10rem;
+    font-size: 1vw;
+    color: #212529;
+    line-height: 1vw;
+}
+
+.boxbanner .btnbanner {
+    position: absolute;
+    width: 10%;
+    height: 5%;
+    background-color: #ff6400;
+    top: 41vh;
+    left: 10rem;
+    font-size: 1vw;
+    color: white;
+    border-radius: 20px 0 20px 0px;
+}
+@media screen and (max-width: 1440px){
+    .bannerimg{
+        width: 100vw;
+    }
+    .boxbanner .span1banner{
+        font-size: 3vw;
+        left: 7rem;
+        top: 15vh;
+    }
+    .boxbanner .span2banner
+    {
+        font-size: 1vw;
+        left: 7rem;
+        top: 22vh;
+    }
+    .boxbanner .btnbanner {
+        position: absolute;
+        width: 10%;
+        height: 5%;
+        background-color: #ff6400;
+        top: 30vh;
+        left: 7rem;
+        font-size: 1vw;
+        color: white;
+        border-radius: 20px 0 20px 0px;
+    }
 }
 @media screen and (max-width: 1024px){
-    .banner{
+    .bannerimg{
         width: 100vw;
+    }
+    .boxbanner .span1banner{
+        font-size: 4.5vw;
+        left: 7rem;
+        top: 18vh;
+        width: 27%;
+        line-height: 3vw;
+    }
+    .boxbanner .span2banner
+    {
+        font-size: 2vw;
+        left: 7rem;
+        top: 28vh;
+        width: 25%;
+        line-height: 2vw;
+    }
+    .spanbanner1{
+        font-size: 3rem;
+    }
+    .spanbanner2{
+        font-size: 1.5rem;
+    }
+    .fotoplaca{
+        width: 160px;
+        height: 160px;
+    }
+    .boxbanner .btnbanner {
+        position: absolute;
+        width: 10%;
+        height: 7%;
+        background-color: #ff6400;
+        top: 37vh;
+        left: 7rem;
+        color: white;
+        font-size: 1.2vw;
+        border-radius: 20px 0 20px 0px;
+    }
+}
+@media screen and (max-width: 768px){
+    .bannerimg{
+        width: 100vw;
+    }
+    .boxbanner .span1banner{
+        font-size: 5.5vw;
+        left: 7rem;
+        top: 7vh;
+        width: 20%;
+        line-height: 4vw;
+    }
+    .boxbanner .span2banner
+    {
+        font-size: 1.5vw;
+        left: 7rem;
+        top: 22vh;
+        width: 20%;
+        line-height: 2vw;
+    }
+    .spanbanner1{
+        font-size: 2.5rem;
+    }
+    .spanbanner2{
+        font-size: 1rem;
+    }
+    .fotoplaca{
+        width: 130px;
+        height: 130px;
+    }
+    .boxbanner .btnbanner {
+        position: absolute;
+        width: 10%;
+        height: 7%;
+        background-color: #ff6400;
+        top: 27vh;
+        left: 7rem;
+        color: white;
+        font-size: 1.2vw;
+        border-radius: 20px 0 20px 0px;
+    }
+}
+@media screen and (max-width: 650px){
+    .bannerimg{
+        width: 100vw;
+    }
+    .boxbanner .span1banner{
+        font-size: 5.5vw;
+        left: 7rem;
+        top: 7vh;
+        width: 20%;
+        line-height: 4vw;
+    }
+    .boxbanner .span2banner
+    {
+        font-size: 1.5vw;
+        left: 7rem;
+        top: 21vh;
+        width: 20%;
+        line-height: 2vw;
+    }
+    .spanbanner1{
+        font-size: 2.5rem;
+    }
+    .spanbanner2{
+        font-size: 1rem;
+    }
+    .fotoplaca{
+        width: 130px;
+        height: 130px;
+    }
+    .boxbanner .btnbanner {
+        position: absolute;
+        width: 10%;
+        height: 7%;
+        background-color: #ff6400;
+        top: 26vh;
+        left: 7rem;
+        color: white;
+        font-size: 1.2vw;
+        border-radius: 20px 0 20px 0px;
     }
 }
 @media screen and (max-width: 425px){
-    .banner{
+    .bannerimg{
         width: 100vw;
+    }
+    .boxbanner .span1banner{
+        font-size: 7vw;
+        left: 2rem;
+        top: 6vh;
+        width: 20%;
+        line-height: 4vw;
+    }
+    .spanbanner1{
+        font-size: 2rem;
+    }
+    .fotoplaca{
+        width: 90px;
+        height: 90px;
+    }
+    .boxbanner .btnbanner {
+        position: absolute;
+        width: 15%;
+        height: 10%;
+        background-color: #ff6400;
+        top: 15vh;
+        left: 2rem;
+        color: white;
+        font-size: 1.6vw;
+        border-radius: 20px 0 20px 0px;
+    }
+    .span2banner{
+        display: none;
+    }
+}
+@media screen and (max-width: 375px){
+    .bannerimg{
+        width: 100VW;
+    }
+    .boxbanner .span1banner{
+        font-size: 7vw;
+        left: 2rem;
+        top: 3vh;
+        width: 20%;
+        line-height: 5vw;
+    }
+    .spanbanner1{
+        font-size: 1.7rem;
+    }
+    .fotoplaca{
+        width: 80px;
+        height: 80px;
+    }
+    .boxbanner .btnbanner {
+        position: absolute;
+        width: 20%;
+        height: 15%;
+        background-color: #ff6400;
+        top: 12vh;
+        left: 2rem;
+        color: white;
+        font-size: 2vw;
+        border-radius: 20px 0 20px 0px;
+    }
+    .placanone325{
+        display: none;
+    }
+}
+@media screen and (max-width: 321px){
+    .bannerimg{
+        width: 100VW;
+    }
+    .boxbanner .span1banner{
+        font-size: 7vw;
+        left: 2rem;
+        top: 3vh;
+        width: 20%;
+        line-height: 4.5vw;
+    }
+    .spanbanner1{
+        font-size: 1.7rem;
+    }
+    .containerspan2{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .fotoplaca{
+        width: 80px;
+        height: 80px;
+    }
+    .placanone325{
+        display: none;
+    }
+    .boxbanner .btnbanner {
+        position: absolute;
+        width: 20%;
+        height: 15%;
+        background-color: #ff6400;
+        top: 10vh;
+        left: 2rem;
+        color: white;
+        font-size: 2vw;
+        border-radius: 20px 0 20px 0px;
     }
 }

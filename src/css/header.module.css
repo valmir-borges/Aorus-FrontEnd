@@ -85,7 +85,7 @@ header section a span:hover {
         gap: 1.3rem;
     }
 }
-@media screen and (max-width: 1024px    ){
+@media screen and (max-width: 1024px){
     .nav {
         padding-left: 6rem;
         padding-right: 6rem;
@@ -145,6 +145,40 @@ header section a span:hover {
     }
     .logodesenho{
         display: none;
+    }
+    .homemobile{
+        display: block;
+    }
+    .linknone{
+        display: none;
+    }
+    .homemobile{
+        font-size: 1rem;
+    }
+    .navmobile{
+        font-size: 1rem;
+    }
+    header div a span:hover {
+        transition-timing-function: ease;
+        transition-duration: 0.7s;
+        color: #FF6400;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .secaoesquerda{
+        gap: 0.5rem;
+    }
+}
+@media screen and (max-width: 375px    ){
+    .nav {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .logodesenho{
+        display: none;
+    }
+    .logoescrito{
+        height: 4rem;
     }
     .homemobile{
         display: block;
