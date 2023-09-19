@@ -45,3 +45,98 @@ header section a span:hover {
     border-radius: 5px;
     cursor: pointer;
 }
+@media screen and (max-width: 1024px){
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: black;
+        flex-direction: row;
+        padding-left: 5rem;
+        padding-right: 5rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        border-bottom: 2px solid #FF6400;
+    }
+}
+@media screen and (max-width: 768px){
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: black;
+        flex-direction: row;
+        padding-left: 5rem;
+        padding-right: 5rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        border-bottom: 2px solid #FF6400;
+    }
+    .logodesenho {
+        height: 3.5rem;
+    }
+    .logoescrito{
+        height: 3.5rem;
+    }
+    .produtos {
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width: 425px){
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: black;
+        flex-direction: row;
+        padding-left: 1.8rem;
+        padding-right: 1.8rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        border-bottom: 2px solid #FF6400;
+    }
+    .logodesenho {
+        display: none;    
+    }
+    .logoescrito{
+        height: 3.5rem;
+    }
+    .produtos {
+        font-size: 1rem;
+    }
+    .secaoesquerda{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        gap: 0.5rem;
+    }
+}
+@media screen and (max-width: 375px){
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: black;
+        flex-direction: row;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        border-bottom: 2px solid #FF6400;
+    }
+    .logodesenho {
+        display: none;    
+    }
+    .logoescrito{
+        height: 3.5rem;
+    }
+    .produtos {
+        font-size: 0.9rem;
+    }
+    .secaoesquerda{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        gap: 0.5rem;
+    }
+}
