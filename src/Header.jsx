@@ -39,9 +39,8 @@ function Header() {
         </section>
       </nav>
       <div className={Style.mobilemenu} style={{ display: exibe }}>
-          <a href=""><span className={Style.navmobile}>Lançamentos</span></a>
-          <a href=""><span className={Style.navmobile}>Sobre nós</span></a>
-          <a href=""><span className={Style.navmobile}>Contato</span></a>
+          <a href="/catalogo"><span className={Style.navmobile}>Lançamentos</span></a>
+          <a href="/cadastroplaca"><span className={Style.navmobile}>Cadastre sua Placa</span></a>
         </div>
     </header>
     </>
