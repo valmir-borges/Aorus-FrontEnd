@@ -1,19 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from "./App"
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Login from './Login';
-import Cadastro from "./Cadastro"
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import Filmes from './Filmes'
-import EditaFilme from './EditaFilme';
-import Home from './Home'
+import Home from './App'
 import Header from './Header';
 import Loginaorus from './Loginaorus';
 import Cadastroaorus from './Cadastroaorus'
-import Placa from './Placa';
 import Catalogo from './Catalogo';
 import CadastroPlaca from './CadastroPlaca';
+import EditaPlaca from './EditaPlaca'
 
 //Mudando o tema dos componentes do material UI
 const theme = createTheme({
@@ -31,7 +26,7 @@ const theme = createTheme({
       paper:'black'
     },
     text: {
-      primary: '#ffff',
+      primary: '#fff',
       secondary: 'rgba(255,255,255,0.6)',    },
   },
 })
@@ -40,26 +35,6 @@ const router = createBrowserRouter(
   [
     {
       path: '/',
-      element: <App/>
-    },
-    {
-      path: '/Login',
-      element: <Login/>
-    },
-    {
-      path: '/Cadastro',
-      element: <Cadastro/>
-    },
-    {
-      path: '/Filmes',
-      element: <Filmes/>
-    },
-    {
-      path: '/edicao/:id',
-      element: <EditaFilme/>
-    },
-    {
-      path: 'Home',
       element: <Home/>
     },
     {
@@ -75,16 +50,16 @@ const router = createBrowserRouter(
       element: <Cadastroaorus/>
     },
     {
-      path: 'Placa',
-      element: <Placa/>
-    },
-    {
       path: 'Catalogo',
       element: <Catalogo/>
     },
     {
       path: 'CadastroPlaca',
       element:<CadastroPlaca/>
+    },
+    {
+      path: '/editaplaca/:id',
+      element: <EditaPlaca/>
     }
   ]
 )

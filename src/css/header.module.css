@@ -158,6 +158,9 @@ header section a span:hover {
     .navmobile{
         font-size: 1rem;
     }
+    .secaodireita{
+        gap: 0.3rem;
+    }
     header div a span:hover {
         transition-timing-function: ease;
         transition-duration: 0.7s;
@@ -171,8 +174,8 @@ header section a span:hover {
 }
 @media screen and (max-width: 375px    ){
     .nav {
-        padding-left: 1rem;
-        padding-right: 1rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
     }
     .logodesenho{
         display: none;
@@ -198,8 +201,5 @@ header section a span:hover {
         color: #FF6400;
         border-radius: 5px;
         cursor: pointer;
-    }
-    .secaoesquerda{
-        gap: 0.5rem;
     }
 }
