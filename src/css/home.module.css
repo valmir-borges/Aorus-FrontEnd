@@ -4,7 +4,7 @@ body {
 .container{
     display: flex;
     flex-direction: column;
-    gap: 1.2rem;
+    gap: 2rem;
     margin-top: 1.5rem;
 }
 .containerimg {
@@ -35,7 +35,7 @@ body {
     display: inline-block;
     position: relative  ;
 }
-.boxbanner .span1banner {
+.boxbanner .spanimg1 {
     position: absolute;
     top: 30vh;
     left: 10rem;
@@ -46,7 +46,7 @@ body {
 .bannerimg {
     width: 99vw;    
 }
-.boxbanner .span2banner {
+.boxbanner .spanimg2 {
     position: absolute;
     width: 20%;
     top: 36vh;
@@ -67,27 +67,40 @@ body {
     color: white;
     border-radius: 20px 0 20px 0px;
 }
+.btnbanner:hover
+{
+        -webkit-transform: scale(1.3);
+        -ms-transform: scale(1.3);
+        transform: scale(1.3);
+        transition-duration: 0.7s;
+}
+.fotoplaca:hover{
+    -webkit-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    transform: scale(1.3);
+    transition-duration: 0.7s;
+}
 @media screen and (max-width: 1440px){
     .bannerimg{
         width: 100vw;
     }
-    .boxbanner .span1banner{
+    .boxbanner .spanimg1{
         font-size: 3vw;
         left: 7rem;
-        top: 15vh;
+        top: 30vh;
     }
-    .boxbanner .span2banner
+    .boxbanner .spanimg2
     {
         font-size: 1vw;
         left: 7rem;
-        top: 22vh;
+        top: 36vh;
     }
     .boxbanner .btnbanner {
         position: absolute;
         width: 10%;
         height: 5%;
         background-color: #ff6400;
-        top: 30vh;
+        top: 41vh;
         left: 7rem;
         font-size: 1vw;
         color: white;
@@ -98,18 +111,18 @@ body {
     .bannerimg{
         width: 100vw;
     }
-    .boxbanner .span1banner{
+    .boxbanner .spanimg1{
         font-size: 4.5vw;
         left: 7rem;
-        top: 18vh;
+        top: 20vh;
         width: 27%;
         line-height: 3vw;
     }
-    .boxbanner .span2banner
+    .boxbanner .spanimg2
     {
         font-size: 2vw;
         left: 7rem;
-        top: 28vh;
+        top: 29vh;
         width: 25%;
         line-height: 2vw;
     }
@@ -128,7 +141,7 @@ body {
         width: 10%;
         height: 7%;
         background-color: #ff6400;
-        top: 37vh;
+        top: 38vh;
         left: 7rem;
         color: white;
         font-size: 1.2vw;
@@ -139,55 +152,14 @@ body {
     .bannerimg{
         width: 100vw;
     }
-    .boxbanner .span1banner{
+    .boxbanner .spanimg1{
         font-size: 5.5vw;
         left: 7rem;
         top: 7vh;
         width: 20%;
         line-height: 4vw;
     }
-    .boxbanner .span2banner
-    {
-        font-size: 1.5vw;
-        left: 7rem;
-        top: 22vh;
-        width: 20%;
-        line-height: 2vw;
-    }
-    .spanbanner1{
-        font-size: 2.5rem;
-    }
-    .spanbanner2{
-        font-size: 1rem;
-    }
-    .fotoplaca{
-        width: 130px;
-        height: 130px;
-    }
-    .boxbanner .btnbanner {
-        position: absolute;
-        width: 10%;
-        height: 7%;
-        background-color: #ff6400;
-        top: 27vh;
-        left: 7rem;
-        color: white;
-        font-size: 1.2vw;
-        border-radius: 20px 0 20px 0px;
-    }
-}
-@media screen and (max-width: 650px){
-    .bannerimg{
-        width: 100vw;
-    }
-    .boxbanner .span1banner{
-        font-size: 5.5vw;
-        left: 7rem;
-        top: 7vh;
-        width: 20%;
-        line-height: 4vw;
-    }
-    .boxbanner .span2banner
+    .boxbanner .spanimg2
     {
         font-size: 1.5vw;
         left: 7rem;
@@ -217,11 +189,52 @@ body {
         border-radius: 20px 0 20px 0px;
     }
 }
+@media screen and (max-width: 650px){
+    .bannerimg{
+        width: 100vw;
+    }
+    .boxbanner .spanimg1{
+        font-size: 5.5vw;
+        left: 7rem;
+        top: 7vh;
+        width: 20%;
+        line-height: 4vw;
+    }
+    .boxbanner .spanimg2
+    {
+        font-size: 1.5vw;
+        left: 7rem;
+        top: 18vh;
+        width: 20%;
+        line-height: 2vw;
+    }
+    .spanbanner1{
+        font-size: 2.5rem;
+    }
+    .spanbanner2{
+        font-size: 1rem;
+    }
+    .fotoplaca{
+        width: 130px;
+        height: 130px;
+    }
+    .boxbanner .btnbanner {
+        position: absolute;
+        width: 10%;
+        height: 7%;
+        background-color: #ff6400;
+        top: 22vh;
+        left: 7rem;
+        color: white;
+        font-size: 1.2vw;
+        border-radius: 20px 0 20px 0px;
+    }
+}
 @media screen and (max-width: 425px){
     .bannerimg{
         width: 100vw;
     }
-    .boxbanner .span1banner{
+    .boxbanner .spanimg1{
         font-size: 7vw;
         left: 2rem;
         top: 6vh;
@@ -240,21 +253,31 @@ body {
         width: 15%;
         height: 10%;
         background-color: #ff6400;
-        top: 15vh;
+        top: 14vh;
         left: 2rem;
         color: white;
         font-size: 1.6vw;
         border-radius: 20px 0 20px 0px;
     }
-    .span2banner{
+    .spanimg2{
         display: none;
+    }
+    .placanone425{
+        display: none;
+    }
+    .spanbanner2{
+        font-size: 1rem;
+    }
+    .containerspan2{
+        width: 80%;
+        margin: 0 auto;
     }
 }
 @media screen and (max-width: 375px){
     .bannerimg{
         width: 100VW;
     }
-    .boxbanner .span1banner{
+    .boxbanner .spanimg1{
         font-size: 7vw;
         left: 2rem;
         top: 3vh;
@@ -273,21 +296,18 @@ body {
         width: 20%;
         height: 15%;
         background-color: #ff6400;
-        top: 12vh;
+        top: 11vh;
         left: 2rem;
         color: white;
         font-size: 2vw;
         border-radius: 20px 0 20px 0px;
-    }
-    .placanone325{
-        display: none;
     }
 }
 @media screen and (max-width: 321px){
     .bannerimg{
         width: 100VW;
     }
-    .boxbanner .span1banner{
+    .boxbanner .spanimg1{
         font-size: 7vw;
         left: 2rem;
         top: 3vh;

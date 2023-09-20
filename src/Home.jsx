@@ -16,8 +16,8 @@ function Home() {
     <Header/>
     <section className={Style.containerbanner}>
       <div className={Style.boxbanner}>
-        <span className={Style.span1banner}>Carry your game</span>
-        <span className={Style.span2banner}>AORUS ELITE Graphics Cards and Motherboards</span>
+        <span className={Style.spanimg1}>Carry your game</span>
+        <span className={Style.spanimg2}>AORUS ELITE Graphics Cards and Motherboards</span>
         <button className={Style.btnbanner}>SEE MORE</button>
         <img src={bannerr} className={Style.bannerimg} alt="" />
       </div>
@@ -33,16 +33,16 @@ function Home() {
         <span className={Style.spanbanner2}>Linhas de placas de vídeos desde o uso básico até o high-end</span>
       </div>
       <div className={Style.containerimg}>
-        <div>
+        <div className={Style.teste}>
           <img className={Style.fotoplaca} src={placa1} alt="" />
         </div>
         <div>
           <img className={Style.fotoplaca} src={placa2} alt="" />
         </div>
-        <div className={Style.placanone325}>
+        <div className={Style.placanone425}>
           <img className={Style.fotoplaca} src={placa3} alt="" />
         </div>
-        <div className={Style.placanone325}>
+        <div className={Style.placanone425}>
           <img className={Style.fotoplaca} src={placa4} alt="" />
         </div>
       </div>

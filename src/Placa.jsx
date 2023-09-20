@@ -23,7 +23,7 @@ function placa() {
             </Typography>
             <Grid container sx={{mt:"1rem"}}>
             <Grid item xs={20} sx={{display:"flex",flexDirection:"row", justifyContent:"space-between"}}>
-                <span style={{fontSize:"0.9rem"}}>Perfil:</span>
+                <span style={{fontSize:"0.9rem"}}>Uso:</span>
                 <span  style={{color:"#FF6400",fontSize:"0.9rem"}}>High-end</span>
             </Grid>
             <Grid item xs={20} sx={{display:"flex",flexDirection:"row", justifyContent:"space-between", mt:"1vh"}}>
@@ -32,7 +32,7 @@ function placa() {
             </Grid>
             <Grid item xs={20} sx={{display:"flex",flexDirection:"row", justifyContent:"space-between", mt:"1vh"}}>
                 <span style={{fontSize:"0.9rem"}}>Preço:</span>
-                <span  style={{color:"#FF6400",fontSize:"0.9rem"}}>R$2000</span>
+                <span  style={{color:"#FF6400",fontSize:"0.9rem"}}>R$8999</span>
             </Grid>
             </Grid>
             <Grid container sx={{mt:2, display:'flex',flexDirection:'row', justifyContent:'space-between', textAlign:'center'}}>
