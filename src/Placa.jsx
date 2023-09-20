@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box, Card, CardActionArea, CardContent, CardMedia, Grid, Typography, Link } from '@mui/material'
-import Style from '../src/css/cardplaca.module.css'
+import Style from './css/cardplaca.module.css'
 
 
 function placa() {
@@ -15,29 +15,32 @@ function placa() {
         alt
         />
         <CardContent>
-            <Typography gutterBottom variant="h6" component="div" sx={{display:"block", wordBreak:"break-word"}}>
-            AORUS GeForce RTX™ 4070 Ti 12GB XTREME WATERFORCE            
+            <Typography gutterBottom variant="span" component="div" sx={{display:"block", wordBreak:"break-word", fontSize:"1.5rem", textAlign:"center"}}>
+                AORUS GeForce RTX™ 4070 Ti 12GB XTREME WATERFORCE            
             </Typography>
-            <Typography variant="body2" color="text.secondary">
-            RTX
+            <Typography variant="span" color="text.secondary" sx={{display:"block",mt:"1rem", fontSize:"1rem", textAlign:'center'}}>
+            Linha RTX
             </Typography>
-            <Grid container>
-            <Grid item xs={3}>
-                <span>High-end</span>
+            <Grid container sx={{mt:"1rem"}}>
+            <Grid item xs={20} sx={{display:"flex",flexDirection:"row", justifyContent:"space-between"}}>
+                <span style={{fontSize:"0.9rem"}}>Perfil:</span>
+                <span  style={{color:"#FF6400",fontSize:"0.9rem"}}>High-end</span>
             </Grid>
-            <Grid item xs={3}>
-                <span>2022</span>
+            <Grid item xs={20} sx={{display:"flex",flexDirection:"row", justifyContent:"space-between", mt:"1vh"}}>
+                <span style={{fontSize:"0.9rem"}} >Ano de lançamento:</span>
+                <span  style={{color:"#FF6400",fontSize:"0.9rem"}}>2022</span>
             </Grid>
-            <Grid item xs={3    }>
-                <span>R$2000</span>
+            <Grid item xs={20} sx={{display:"flex",flexDirection:"row", justifyContent:"space-between", mt:"1vh"}}>
+                <span style={{fontSize:"0.9rem"}}>Preço:</span>
+                <span  style={{color:"#FF6400",fontSize:"0.9rem"}}>R$2000</span>
             </Grid>
             </Grid>
-            <Grid container sx={{mt:2}}>
+            <Grid container sx={{mt:2, display:'flex',flexDirection:'row', justifyContent:'space-between', textAlign:'center'}}>
             <Grid item xs={6}>
-                <button style={{backgroundColor:"transparent"}}>Excluir</button>
+                <button className={Style.btndel}>Excluir</button>
             </Grid>            
             <Grid item xs={6}>
-                <Link>Editar</Link>
+                <button className={Style.btnedit}>Editar</button>
             </Grid>
         </Grid>
         </CardContent>

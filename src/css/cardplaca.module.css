@@ -7,3 +7,29 @@
     border: none  ;
     color: white;
   }
+  .btndel{
+    background-color: transparent;
+    border: 1px solid white;
+    width: 80%;
+    height: 2rem;
+    font-size: 1rem;
+  }
+  .btndel:hover{
+    transition-timing-function: ease;
+    transition-duration: 1s;
+    background-color: red;
+    cursor: pointer;
+  }
+  .btnedit{
+      background-color: transparent;
+      border: 1px solid white;
+      width: 80%;
+      height: 2rem;
+      font-size: 1rem;
+  }
+  .btnedit:hover{
+    transition-timing-function: ease;
+    transition-duration: 1s;
+    background-color: #FF6400;
+    cursor: pointer;
+  }
