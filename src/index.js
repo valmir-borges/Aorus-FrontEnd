@@ -13,6 +13,7 @@ import Loginaorus from './Loginaorus';
 import Cadastroaorus from './Cadastroaorus'
 import Placa from './Placa';
 import Catalogo from './Catalogo';
+import CadastroPlaca from './CadastroPlaca';
 
 //Mudando o tema dos componentes do material UI
 const theme = createTheme({
@@ -27,7 +28,7 @@ const theme = createTheme({
     },
     background:{
       default: '#1e1e1e',
-      paper:'#fff'
+      paper:'black'
     },
     text: {
       primary: '#ffff',
@@ -81,6 +82,10 @@ const router = createBrowserRouter(
       path: 'Catalogo',
       element: <Catalogo/>
     },
+    {
+      path: 'CadastroPlaca',
+      element:<CadastroPlaca/>
+    }
   ]
 )
 
