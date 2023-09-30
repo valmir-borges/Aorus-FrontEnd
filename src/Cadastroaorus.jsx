@@ -72,7 +72,7 @@ function Loginaorus() {
             <Box sx={{ backgroundColor:"rgba(0, 0, 0, 0.6)",padding: "40px", borderRadius: "10px", boxShadow: "2px", display:"flex", flexDirection:"column", alignItems:"center"}}>
             <Typography component="h1" variant='h4' sx={{fontWeight:"bolder", fontFamily: 'Aldrich'}}>Crie sua conta</Typography>
             {erro && (<Alert severity='warning' sx={{mt:2, mb:2, backgroundColor:"black", textAlign:"center"}}>Desculpe tente novamente</Alert>)}
-            {cadastro && (<Alert severity="success" sx={{backgroundColor:"black", textAlign:"center"}}>Vcoê foi cadastrado com sucesso</Alert>)}
+            {cadastro && (<Alert severity="success" sx={{backgroundColor:"black", textAlign:"center"}}>Você foi cadastrado com sucesso</Alert>)}
             <Box component="form" onSubmit={Cadastrar}>
                 <TextField 
                 label="Nome" 
