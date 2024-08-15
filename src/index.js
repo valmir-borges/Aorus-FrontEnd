@@ -2,17 +2,22 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import Home from './App'
-import Header from './Header';
-import Loginaorus from './Loginaorus';
-import Cadastroaorus from './Cadastroaorus'
-import Catalogo from './Catalogo';
-import CadastroPlaca from './CadastroPlaca';
-import EditaPlaca from './EditaPlaca'
 
-//Mudando o tema dos componentes do material UI
+//Importando Pages
+import Home from './Pages/Home';
+import Header from './Pages/Header';
+import Loginaorus from './Pages/Loginaorus';
+import Cadastroaorus from './Pages/Cadastroaorus';
+import Catalogo from './Pages/Catalogo';
+import CadastroProduct from './Pages/CadastroProduct';
+import EditaProduct from './Pages/EditaProduct';
+import DashBoardCatalogo from './Pages/DashBoardCatalogo'
+
+import AuthProvider from './context/authProvider';
+import ProtectedRoute from './routes/ProtectedRoute';
+
+// Mudando o tema dos componentes do material UI
 const theme = createTheme({
-  //aqui dentro vai ter cor primária, secundária e etc
   palette: {
     mode: 'light',
     primary: {
@@ -21,54 +26,81 @@ const theme = createTheme({
     secondary: {
       main: '#660025',
     },
-    background:{
+    background: {
       default: '#1e1e1e',
-      paper:'black'
+      paper: 'black'
     },
     text: {
       primary: '#fff',
-      secondary: 'rgba(255,255,255,0.6)',    },
+      secondary: 'rgba(255,255,255,0.6)',
+    },
   },
-})
+});
 
-const router = createBrowserRouter(
-  [
-    {
-      path: '/',
-      element: <Home/>
-    },
-    {
-      path: 'Header',
-      element: <Header/>
-    },
-    {
-      path: 'Loginaorus',
-      element: <Loginaorus/>
-    },
-    {
-      path: 'Cadastroaorus',
-      element: <Cadastroaorus/>
-    },
-    {
-      path: 'Catalogo',
-      element: <Catalogo/>
-    },
-    {
-      path: 'CadastroPlaca',
-      element:<CadastroPlaca/>
-    },
-    {
-      path: '/editaplaca/:id',
-      element: <EditaPlaca/>
-    }
-  ]
-)
-
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: (
+      <ProtectedRoute>
+        <Home />
+      </ProtectedRoute>
+    )
+  },
+  {
+    path: 'Header',
+    element: (
+      <ProtectedRoute>
+        <Header />
+      </ProtectedRoute>
+    )
+  },
+  {
+    path: 'Loginaorus',
+    element: <Loginaorus />
+  },
+  {
+    path: 'Cadastroaorus',
+    element: <Cadastroaorus />
+  },
+  {
+    path: 'Catalogo',
+    element: (
+      <ProtectedRoute>
+        <Catalogo />
+      </ProtectedRoute>
+    )
+  },
+  {
+    path: 'CadastroProduct',
+    element: (
+      <ProtectedRoute>
+        <CadastroProduct />
+      </ProtectedRoute>
+    )
+  },
+  {
+    path: '/editaproduct/:id',
+    element: (
+      <ProtectedRoute>
+        <EditaProduct />
+      </ProtectedRoute>
+    )
+  },
+  {
+    path: 'DashBoardCatalogo',
+    element: (
+      <ProtectedRoute>
+        <DashBoardCatalogo />
+      </ProtectedRoute>
+    )
+  },
+]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <ThemeProvider theme={theme} >
-    <RouterProvider router={router}/>
-    </ThemeProvider>
-
+  <ThemeProvider theme={theme}>
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
+  </ThemeProvider>
 );

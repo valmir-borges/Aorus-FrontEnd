@@ -7,3 +7,29 @@
     border: none  ;
     color: white;
   }
+/* styles.css ou um arquivo CSS global */
+
+:root {
+  --swiper-pagination-bullet-inactive-width: 25px;
+  --swiper-pagination-bullet-inactive-height: 5px;
+  --swiper-pagination-bullet-inactive-transform: skewX(-45deg);
+  --swiper-pagination-bullet-active-width: 142px;
+  --swiper-pagination-bullet-active-height: 5px;
+  --swiper-pagination-bullet-active-transform: skewX(-45deg);
+}
+
+.swiper-pagination-bullet {
+  width: var(--swiper-pagination-bullet-inactive-width);
+  height: var(--swiper-pagination-bullet-inactive-height);
+  transform: var(--swiper-pagination-bullet-inactive-transform);
+  background-color: #ccc;
+  opacity: 1;
+  transition: width 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  width: var(--swiper-pagination-bullet-active-width);
+  height: var(--swiper-pagination-bullet-active-height);
+  transform: var(--swiper-pagination-bullet-active-transform);
+  background-color: var(--swiper-pagination-color);
+}

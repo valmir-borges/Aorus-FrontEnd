@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: black;
+    background-color: #141414;
     flex-direction: row;
     padding-left: 9rem;
     padding-right: 9rem;
@@ -38,12 +38,6 @@ a{
     background-color: transparent;
     cursor: pointer;
 }
-.secaodireita{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 2rem;
-}
 .produtos {
     font-size: 1.2rem;
 }
@@ -65,7 +59,29 @@ header section a span:hover {
 .homemobile{
     display: none;
 }
-
+.secaodireita {
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* Espaçamento entre os elementos */
+  }
+  
+  /* Estilos adicionais para o ícone de logout */
+  .logoutButton {
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .userPhoto {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 8px;
+  }
+  
 @media screen and (max-width: 1440px    ){
     .nav {
         padding-left: 6rem;
