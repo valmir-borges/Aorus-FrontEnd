@@ -1,6 +1,6 @@
 import { Box, CardMedia, Container, Typography, Link } from '@mui/material'
 import React from 'react'
-import Header from './Header'
+import Header from '../components/Header'
 import Footer from '../components/Footer'
 
 import Style from '../css/home.module.css'
@@ -64,11 +64,11 @@ function Home() {
         price={product.price}
         userName={product.user.name}
         imageUser={product.user.image}
+        id={product._id}
         />
         ))
       )}
       </Container>
-      <Footer/>
     </>
   )
 }

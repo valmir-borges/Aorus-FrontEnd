@@ -61,6 +61,15 @@ function Product(props) {
             </Grid>
           </Grid>
           )}
+          <Grid container sx={{ mt: 2, display: 'flex', flexDirection: 'row', justifyContent: 'space-between', textAlign: 'center', }}>
+            <Grid item xs={12}>
+              <button className={Style.btnedit}>
+                <Link href={`detalhesproduct/${props.id}`} sx={{ textDecoration: "none", color: "white" }}>
+                  Detalhes
+                </Link>
+              </button>
+            </Grid>
+          </Grid>
         </CardContent>
       </CardActionArea>
     </Card>

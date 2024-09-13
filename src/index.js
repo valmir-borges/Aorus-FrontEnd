@@ -5,7 +5,6 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 //Importando Pages
 import Home from './Pages/Home';
-import Header from './Pages/Header';
 import Loginaorus from './Pages/Loginaorus';
 import Cadastroaorus from './Pages/Cadastroaorus';
 import Catalogo from './Pages/Catalogo';
@@ -15,6 +14,8 @@ import DashBoardCatalogo from './Pages/DashBoardCatalogo'
 
 import AuthProvider from './context/authProvider';
 import ProtectedRoute from './routes/ProtectedRoute';
+import Detalhes from './components/Detalhes';
+import Footer from './components/Footer';
 
 // Mudando o tema dos componentes do material UI
 const theme = createTheme({
@@ -43,14 +44,6 @@ const router = createBrowserRouter([
     element: (
       <ProtectedRoute>
         <Home />
-      </ProtectedRoute>
-    )
-  },
-  {
-    path: 'Header',
-    element: (
-      <ProtectedRoute>
-        <Header />
       </ProtectedRoute>
     )
   },
@@ -94,6 +87,14 @@ const router = createBrowserRouter([
       </ProtectedRoute>
     )
   },
+  {
+    path: '/detalhesproduct/:id',
+    element: (
+      <ProtectedRoute>
+        <Detalhes />
+      </ProtectedRoute>
+    )
+  },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -101,6 +102,7 @@ root.render(
   <ThemeProvider theme={theme}>
     <AuthProvider>
       <RouterProvider router={router} />
+      <Footer/>
     </AuthProvider>
   </ThemeProvider>
 );

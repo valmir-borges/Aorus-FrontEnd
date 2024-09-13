@@ -1,5 +1,5 @@
 import { Container, Link, Typography } from "@mui/material";
-import Header from "./Header";
+import Header from '../components/Header';
 import Product from "../components/Product";
 import { useEffect, useState } from "react";
 

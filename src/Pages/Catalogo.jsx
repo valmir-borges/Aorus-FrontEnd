@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Header from './Header';
+import Header from '../components/Header';
 import Product from '../components/Product';
 import { Autocomplete, Button, Container, TextField, Typography } from "@mui/material";
 
@@ -179,6 +179,7 @@ function Catalogo() {
             price={product.price}
             userName={product.user.name}
             imageUser={product.user.image}
+            id={product._id}
           />
         ))}
       </Container>

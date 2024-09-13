@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import Style from '../css/login.module.css';
 import { Alert, Autocomplete, Box, Button, Container, TextField, Typography } from '@mui/material';
 import { useState, useEffect } from 'react';
-import Header from './Header';
+import Header from '../components/Header';
 import { AuthContext } from '../context/authProvider';
 
 function CadastroPlaca() {

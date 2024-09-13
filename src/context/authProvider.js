@@ -77,6 +77,7 @@ function AuthProvider({ children }) {
         setLogado(false);
         setDados({});
         localStorage.clear();
+        setMessage('')
     }
 
     return (

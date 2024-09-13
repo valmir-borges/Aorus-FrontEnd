@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Alert, Autocomplete, Box, Button, Container, Grid, TextField, Typography } from '@mui/material';
 import { useNavigate, useParams } from 'react-router-dom';
-import Header from './Header';
+import Header from '../components/Header';
 import Style from '../css/login.module.css';
 
 function EditaPlaca() {
