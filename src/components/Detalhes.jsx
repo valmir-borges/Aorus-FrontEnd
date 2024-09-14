@@ -6,6 +6,7 @@ import StarIcon from '@mui/icons-material/Star';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import CreditCardIcon from '@mui/icons-material/CreditCard';
+import Footer from './Footer';
 
 function Detalhes(props){
     const { id } = useParams(); // Obtém o ID da URL
@@ -206,6 +207,7 @@ function Detalhes(props){
               </Grid>
           </Container>
         </Container>
+        <Footer />
         </>
     )
 }

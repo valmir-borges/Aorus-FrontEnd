@@ -69,6 +69,7 @@ function Home() {
         ))
       )}
       </Container>
+      <Footer />
     </>
   )
 }

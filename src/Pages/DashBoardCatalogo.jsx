@@ -2,6 +2,7 @@ import { Container, Link, Typography } from "@mui/material";
 import Header from '../components/Header';
 import Product from "../components/Product";
 import { useEffect, useState } from "react";
+import Footer from "../components/Footer";
 
 function DashBoardCatalogo() {
     const [product, setProduct] = useState([]);
@@ -84,6 +85,7 @@ function DashBoardCatalogo() {
                     </Typography>
                 )}
             </Container>
+            <Footer />
         </>
     );
 }

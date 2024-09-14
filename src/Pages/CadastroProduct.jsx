@@ -4,6 +4,7 @@ import { Alert, Autocomplete, Box, Button, Container, TextField, Typography } fr
 import { useState, useEffect } from 'react';
 import Header from '../components/Header';
 import { AuthContext } from '../context/authProvider';
+import Footer from '../components/Footer';
 
 function CadastroPlaca() {
   const [name, setName] = useState("");
@@ -183,6 +184,7 @@ function CadastroPlaca() {
           </Box>
         </Container>
       </div>
+      <Footer />
     </>
   )
 }

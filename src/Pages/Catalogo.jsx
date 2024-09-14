@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Header from '../components/Header';
 import Product from '../components/Product';
 import { Autocomplete, Button, Container, TextField, Typography } from "@mui/material";
+import Footer from '../components/Footer';
 
 function Catalogo() {
   const [product, setProduct] = useState([]);
@@ -183,6 +184,7 @@ function Catalogo() {
           />
         ))}
       </Container>
+      <Footer />
     </>
   );
 }

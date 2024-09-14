@@ -102,7 +102,6 @@ root.render(
   <ThemeProvider theme={theme}>
     <AuthProvider>
       <RouterProvider router={router} />
-      <Footer/>
     </AuthProvider>
   </ThemeProvider>
 );

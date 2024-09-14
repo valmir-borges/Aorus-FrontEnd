@@ -3,6 +3,7 @@ import { Alert, Autocomplete, Box, Button, Container, Grid, TextField, Typograph
 import { useNavigate, useParams } from 'react-router-dom';
 import Header from '../components/Header';
 import BackImage from '../img/imglogin3.jpg'
+import Footer from '../components/Footer';
 
 function EditaPlaca() {
   const { id } = useParams(); // Obtém o ID da URL
@@ -206,6 +207,7 @@ function EditaPlaca() {
       </Container>
     </Grid>
   </Grid>
+  <Footer />
 </>
 
     </>

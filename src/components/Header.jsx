@@ -66,7 +66,6 @@ function Header() {
 
     const handleLogout = () => {
         Logout();
-        navigate('/login'); // Navega para a página de login após o logout
     };
 
     return (
