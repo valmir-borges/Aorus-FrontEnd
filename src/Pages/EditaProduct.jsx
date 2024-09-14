@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Alert, Autocomplete, Box, Button, Container, Grid, TextField, Typography } from '@mui/material';
 import { useNavigate, useParams } from 'react-router-dom';
 import Header from '../components/Header';
-import Style from '../css/login.module.css';
+import BackImage from '../img/imglogin3.jpg'
 
 function EditaPlaca() {
   const { id } = useParams(); // Obtém o ID da URL
@@ -95,126 +95,119 @@ function EditaPlaca() {
 
   return (
     <>
-      <Header />
-      <div className={Style.fundologin} style={{ paddingTop: '13rem' }}>
-        <Container component="section" maxWidth="md">
-          <Box sx={{ backgroundColor: "rgba(0, 0, 0, 0.6)", padding: "40px", borderRadius: "10px", boxShadow: "2px", display: "flex", flexDirection: "column", alignItems: "center" }}>
-            {message && (<Alert severity="info" sx={{ backgroundColor: "black", textAlign: "center", border: '1px solid #FF6400', mb: '1rem'}}>{message}</Alert>)}
-            <Typography component="h1" variant='span' sx={{ fontWeight: "bolder", fontFamily: 'Aldrich', fontSize: "2rem", textAlign: "center", marginBottom: 1 }}>Editando o produto</Typography>
-            <Typography component="h2" variant='span' sx={{ fontWeight: "bolder", fontFamily: 'Aldrich', fontSize: "1.5rem", textAlign: "center", color: "#FF6400", marginBottom: 2 }}>{name}</Typography>
-            {image && (
-              <Box sx={{ marginBottom: 2 }}>
-                <img src={image} alt={name} style={{ maxWidth: '100%', borderRadius: '10px' }} />
-              </Box>
-            )}
-            <Typography component="h1" variant='span' sx={{ fontWeight: "bolder", fontFamily: 'Aldrich', fontSize: "2rem", textAlign: "center", marginBottom: 1 }}>Produto de:</Typography>
-            <Typography component="h2" variant='span' sx={{ fontWeight: "bolder", fontFamily: 'Aldrich', fontSize: "1.5rem", textAlign: "center", color: "#FF6400", marginBottom: 2 }}>
-            {userPhoto && <img src={userPhoto} alt="Foto do usuário" className={Style.userPhoto} />}
-            {nameUser}
-            </Typography>
-            <Box component="form" onSubmit={Editar} sx={{ width: '100%' }}>
-              <Grid container spacing={2}>
-                <Grid item xs={12}>
-                  <TextField
-                    label="Nome da Placa"
-                    variant='filled'
-                    type='name'
-                    fullWidth
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                  />
-                </Grid>
-                <Grid item xs={12}>
-                  <Autocomplete
-                  value={valueType}
-                  onChange={(event, newValue) => {
-                    setValueType(newValue);
-                  }}
-                  inputValue={inputValueType}
-                  onInputChange={(event, newInputValue) => {
-                    setInputValueType(newInputValue);
-                  }}
-                  id="controllable-states-demo"
-                  options={optionsType}
-                  renderInput={(params) => <TextField {...params} label="Tipo do Produto" variant='filled' />}
+<>
+  <Header />
+  <Grid container justifyContent="center" sx={{ paddingTop: '5rem', paddingBottom: '4rem', backgroundImage: `url(${BackImage})` }}>
+  <Grid item xs={12} md={8}>
+      <Container component="section" maxWidth="md">
+        <Box sx={{ backgroundColor: "rgba(0, 0, 0, 0.6)", padding: "40px", borderRadius: "10px", boxShadow: "2px", display: "flex", flexDirection: "column", alignItems: "center" }}>
+          {message && (<Alert severity="info" sx={{ backgroundColor: "black", textAlign: "center", border: '1px solid #FF6400', mb: '1rem'}}>{message}</Alert>)}
+          <Typography component="h1" variant='span' sx={{ fontWeight: "bolder", fontFamily: 'Aldrich', fontSize: "2rem", textAlign: "center", marginBottom: 1 }}>Editando o produto</Typography>
+          <Typography component="h2" variant='span' sx={{ fontWeight: "bolder", fontFamily: 'Aldrich', fontSize: "1.5rem", textAlign: "center", color: "#FF6400", marginBottom: 2 }}>{name}</Typography>
+          {image && (
+            <Box sx={{ marginBottom: 2 }}>
+              <img src={image} alt={name} style={{ maxWidth: '100%', borderRadius: '10px' }} />
+            </Box>
+          )}
+          <Typography component="h1" variant='span' sx={{ fontWeight: "bolder", fontFamily: 'Aldrich', fontSize: "2rem", textAlign: "center", marginBottom: 1 }}>Produto de:</Typography>
+          <Typography component="h2" variant='span' sx={{ fontWeight: "bolder", fontFamily: 'Aldrich', fontSize: "1.5rem", textAlign: "center", color: "#FF6400", marginBottom: 2 }}>
+          {userPhoto && <img src={userPhoto} alt="Foto do usuário" style={{width: '40px',height: '40px',borderRadius: '50%',objectFit: 'cover',marginRight: '8px'}} />}
+          {nameUser}
+          </Typography>
+          <Box component="form" onSubmit={Editar} sx={{ width: '100%' }}>
+            <Grid container spacing={2}>
+              <Grid item xs={12}>
+                <TextField
+                  label="Nome da Placa"
+                  variant='filled'
+                  type='name'
+                  fullWidth
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
                 />
-                </Grid>
-                <Grid item xs={12}>
-                  <Autocomplete
+              </Grid>
+              <Grid item xs={12}>
+                <Autocomplete
+                value={valueType}
+                onChange={(event, newValue) => setValueType(newValue)}
+                inputValue={inputValueType}
+                onInputChange={(event, newInputValue) => setInputValueType(newInputValue)}
+                id="controllable-states-demo"
+                options={optionsType}
+                renderInput={(params) => <TextField {...params} label="Tipo do Produto" variant='filled' />}
+              />
+              </Grid>
+              <Grid item xs={12}>
+                <Autocomplete
                 value={valueBrand}
-                onChange={(event, newValue) => {
-                  setValueBrand(newValue);
-                }}
+                onChange={(event, newValue) => setValueBrand(newValue)}
                 inputValue={inputValueBrand}
-                onInputChange={(event, newInputValue) => {
-                  setInputValueBrand(newInputValue);
-                }}
+                onInputChange={(event, newInputValue) => setInputValueBrand(newInputValue)}
                 id="controllable-states-demo"
                 options={optionsBrand}
                 renderInput={(params) => <TextField {...params} label="Linha" variant='filled' />}
-                />
-                </Grid>
-                <Grid item xs={12}>
-                  <Autocomplete
-                  value={valueCategory}
-                  onChange={(event, newValue) => {
-                    setValueCategory(newValue);
-                  }}
-                  inputValue={inputValueCategory}
-                  onInputChange={(event, newInputValue) => {
-                    setInputValueCategory(newInputValue);
-                  }}
-                  id="controllable-states-demo"
-                  options={optionsCategory}
-                  renderInput={(params) => <TextField {...params} label="Categoria" variant='filled' />}
-                />
-                </Grid>
-                <Grid item xs={12}>
-                  <TextField
-                    label="Ano de Lançamento"
-                    variant='filled'
-                    type='number'
-                    fullWidth
-                    value={year}
-                    onChange={(e) => setYear(e.target.value)}
-                  />
-                </Grid>
-                <Grid item xs={12}>
-                  <TextField
-                    label="Quantidade em Estoque"
-                    variant='filled'
-                    type='text'
-                    fullWidth
-                    value={amount}
-                    onChange={(e) => setAmount(e.target.value)}
-                  />
-                </Grid>
-                <Grid item xs={12}>
-                  <TextField
-                    label="Preço"
-                    variant='filled'
-                    type='text'
-                    fullWidth
-                    value={price}
-                    onChange={(e) => setPrice(e.target.value)}
-                  />
-                </Grid>
-                <Grid item xs={12}>
-                  <TextField
-                    label="Foto da placa"
-                    variant='filled'
-                    type='text'
-                    fullWidth
-                    value={image}
-                    onChange={(e) => setImage(e.target.value)}
-                  />
-                </Grid>
+              />
               </Grid>
-              <Button type='submit' variant="contained" fullWidth sx={{ mt: 2, mb: 2 }}>Atualizar</Button>
-            </Box>
+              <Grid item xs={12}>
+                <Autocomplete
+                value={valueCategory}
+                onChange={(event, newValue) => setValueCategory(newValue)}
+                inputValue={inputValueCategory}
+                onInputChange={(event, newInputValue) => setInputValueCategory(newInputValue)}
+                id="controllable-states-demo"
+                options={optionsCategory}
+                renderInput={(params) => <TextField {...params} label="Categoria" variant='filled' />}
+              />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  label="Ano de Lançamento"
+                  variant='filled'
+                  type='number'
+                  fullWidth
+                  value={year}
+                  onChange={(e) => setYear(e.target.value)}
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  label="Quantidade em Estoque"
+                  variant='filled'
+                  type='text'
+                  fullWidth
+                  value={amount}
+                  onChange={(e) => setAmount(e.target.value)}
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  label="Preço"
+                  variant='filled'
+                  type='text'
+                  fullWidth
+                  value={price}
+                  onChange={(e) => setPrice(e.target.value)}
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  label="Foto da placa"
+                  variant='filled'
+                  type='text'
+                  fullWidth
+                  value={image}
+                  onChange={(e) => setImage(e.target.value)}
+                />
+              </Grid>
+            </Grid>
+            <Button type='submit' variant="contained" fullWidth sx={{ mt: 2, mb: 2 }}>Atualizar</Button>
           </Box>
-        </Container>
-      </div>
+        </Box>
+      </Container>
+    </Grid>
+  </Grid>
+</>
+
     </>
   );
 }
