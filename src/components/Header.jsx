@@ -13,19 +13,17 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import { useNavigate } from 'react-router-dom';
 import Logo from '../img/logo aorus.png';
-import user from '../img/user.png';
 import { AuthContext } from '../context/authProvider';
-import { useEffect } from 'react';
-import { useContext } from 'react';
-import { useState } from 'react';
+import { useEffect, useContext, useState } from 'react';
 
 const pages = ['Home', 'Lançamentos', 'Cadastre um Produto'];
 const settings = ['Perfil', 'Dashboard', 'Carrinho', 'Logout'];
 
 function Header() {
-    const { Logout } = useContext(AuthContext);
+    const { Logout, dados } = useContext(AuthContext);
     const [userPhoto, setUserPhoto] = useState('');
     const navigate = useNavigate();
+    const name = localStorage.getItem('name')
 
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     const [anchorElUser, setAnchorElUser] = React.useState(null);
@@ -131,7 +129,7 @@ function Header() {
                     <Box sx={{ display: { xs: 'flex', md: 'none' }, justifyContent: 'center', width: '100%' }}>
                         <img 
                             src={Logo} 
-                            style={{ width: '50%' }} 
+                            style={{ width: '60%' }} 
                             alt="Logo" 
                             onClick={() => navigate('/')} // Redireciona para a home ao clicar na logo
                         />
@@ -158,12 +156,34 @@ function Header() {
                             </Button>
                         ))}
                     </Box>
-                    <Box sx={{ flexGrow: 0 }}>
+                    <Box sx={{ flexGrow: 0, display: 'flex', alignItems: 'center' }}>
                         <Tooltip title="Open settings">
-                            <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                                <Avatar alt="Remy Sharp" src={userPhoto} />
+                            <IconButton 
+                                onClick={handleOpenUserMenu} 
+                                sx={{ p: 0, width: 60, height: 60 }} // Ajuste o tamanho do IconButton se necessário
+                            >
+                                <Avatar
+                                    alt="Remy Sharp"
+                                    src={userPhoto}
+                                    sx={{ width: 60, height: 60 }} // Ajuste o tamanho do Avatar
+                                />
                             </IconButton>
                         </Tooltip>
+                        <Typography 
+                            sx={{ 
+                                ml: 2, // Margem à esquerda do texto
+                                display: { xs: 'none', md: 'block' }, // Esconde o texto em telas menores que 728px
+                                fontSize: '1.3rem',
+                                color: 'white',
+                            }}
+                        >
+                            Olá, <Typography                             sx={{ 
+                                display: { xs: 'none', md: 'block' }, // Esconde o texto em telas menores que 728px
+                                fontSize: '1.3rem',
+                                color: '#FF6400',
+                                fontWeight: 'bold'
+                            }}>{name}</Typography>
+                        </Typography>
                         <Menu
                             sx={{ mt: '45px' }}
                             id="menu-appbar"

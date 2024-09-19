@@ -90,10 +90,10 @@ function CadastroPlaca() {
     <>
       <Header />
       <div className={Style.fundologin}>
-        <Container component="section" maxWidth="xs">
+        <Container component="section" maxWidth="sm">
           <Box sx={{ backgroundColor: "rgba(0, 0, 0, 0.6)", padding: "40px", borderRadius: "10px", boxShadow: "2px", display: "flex", flexDirection: "column", alignItems: "center" }}>
             {message && (<Alert severity="info" sx={{ backgroundColor: "black", textAlign: "center", border: '1px solid #FF6400', mb: '1rem' }}>{message}</Alert>)}
-            <Typography component="h1" variant='span' sx={{ fontWeight: "bolder", fontFamily: 'Aldrich', fontSize: "2rem" }}>Cadastre sua placa</Typography>
+            <Typography component="h1" variant='span' sx={{ fontWeight: "bolder", fontFamily: 'Aldrich', fontSize: "2rem" }}>Cadastre seu produto</Typography>
             <Box component="form" onSubmit={Cadastrar}>
               <TextField 
                 label="Nome do Produto" 

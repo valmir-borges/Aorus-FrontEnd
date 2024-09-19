@@ -32,19 +32,19 @@ function Product(props) {
           <Grid container sx={{ mt: "1rem" }}>
             <Grid item xs={12} sx={{ display: "flex", flexDirection: "row", justifyContent: "space-between" }}>
               <span style={{ fontSize: "1rem" }}>Uso:</span>
-              <span style={{ color: "#FF6400", fontSize: "1rem", fontWeight: "bolder" }}>{props.category}</span>
+              <span style={{ color: "#FF6400", fontSize: "1rem" }}>{props.category}</span>
             </Grid>
             <Grid item xs={12} sx={{ display: "flex", flexDirection: "row", justifyContent: "space-between", mt: "1vh" }}>
               <span style={{ fontSize: "1rem" }}>Ano de lançamento:</span>
-              <span style={{ color: "#FF6400", fontSize: "1rem", fontWeight: "bolder" }}>{props.year}</span>
+              <span style={{ color: "#FF6400", fontSize: "1rem" }}>{props.year}</span>
             </Grid>
             <Grid item xs={12} sx={{ display: "flex", flexDirection: "row", justifyContent: "space-between", mt: "1vh" }}>
               <span style={{ fontSize: "1rem" }}>Preço:</span>
-              <span style={{ color: "#FF6400", fontSize: "1rem", fontWeight: "bolder" }}>R$: {props.price}</span>
+              <span style={{ color: "#FF6400", fontSize: "1rem" }}>R$: {props.price}</span>
             </Grid>
             <Grid item xs={12} sx={{ display: "flex", flexDirection: "row", justifyContent: "space-between", mt: "1vh" }}>
               <span style={{ fontSize: "1rem" }}>Quantidade em estoque:</span>
-              <span style={{ color: "#FF6400", fontSize: "1rem", fontWeight: "bolder" }}>{props.amount} unidades</span>
+              <span style={{ color: "#FF6400", fontSize: "1rem" }}>{props.amount} unidades</span>
             </Grid>
           </Grid>
           {props.excluir && (

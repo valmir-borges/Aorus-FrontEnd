@@ -1,14 +1,8 @@
 .container{
     width: 100%;
     margin: 2rem auto 0 auto ;
-    padding: 0 10rem;
+    padding: 0 1rem;
     box-sizing: border-box;
-}
-.container h2{
-    font-weight: bold;
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 1rem;
 }
 .item{
     width: 100%;
@@ -31,6 +25,15 @@
         background-color: #FF6400; /* Cor da bolinha ativa */
         transform: skewX(-45deg);
       }
+      /* carrossel.module.css */
+
+:root {
+    --swiper-navigation-size: 44px;
+    --swiper-navigation-top-offset: 50%;
+    --swiper-navigation-sides-offset: 10px;
+    --swiper-navigation-color: #8e8e8e; /* Defina a cor desejada */
+  }
+  
       
 @media screen and (max-width: 1440px){
     .container h2{

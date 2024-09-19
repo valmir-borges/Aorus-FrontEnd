@@ -15,7 +15,7 @@ import DashBoardCatalogo from './Pages/DashBoardCatalogo'
 import AuthProvider from './context/authProvider';
 import ProtectedRoute from './routes/ProtectedRoute';
 import Detalhes from './components/Detalhes';
-import Footer from './components/Footer';
+import CardCarrossel from './components/CardCarrossel';
 
 // Mudando o tema dos componentes do material UI
 const theme = createTheme({
@@ -92,6 +92,14 @@ const router = createBrowserRouter([
     element: (
       <ProtectedRoute>
         <Detalhes />
+      </ProtectedRoute>
+    )
+  },
+  {
+    path: '/teste',
+    element: (
+      <ProtectedRoute>
+        <CardCarrossel />
       </ProtectedRoute>
     )
   },
