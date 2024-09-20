@@ -124,7 +124,7 @@ function Cadastroaorus() {
                         <Button type='submit' variant="contained" fullWidth sx={{ mt: 2, mb: 2 }}>Cadastrar</Button>
                         <Grid container>
                             <Grid item xs>
-                                <Link href={"/Loginaorus"}>Já possuo uma conta</Link>
+                                <Link href={"/Loginaorus"} sx={{color: 'white'}}>Já possuo uma conta</Link>
                             </Grid>
                         </Grid>
                     </Box>

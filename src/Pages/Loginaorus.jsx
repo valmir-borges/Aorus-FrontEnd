@@ -63,7 +63,7 @@ function Loginaorus() {
                                 Esqueci a senha
                             </Grid>
                             <Grid item>
-                                <Link href={"/Cadastroaorus"}>Cadastre-se</Link>
+                                <Link href={"/Cadastroaorus"} sx={{color: 'white'}}>Cadastre-se</Link>
                             </Grid>
                         </Grid>
                     </Box>

@@ -94,8 +94,15 @@ function Detalhes(props){
     return(
         <>
         <Header/>
-        <Container sx={{maxWidth: 'xl', display: 'flex', marginTop: 10, marginBottom: 10}}>
-            <Container component='section' sx={{backgroundColor: 'transparent', maxWidth:"xl", alignItems: 'center', justifyContent: 'center', alignContent: 'center', textAlign: 'center'}}>
+        <Container
+          sx={{
+            maxWidth: 'xl',
+            display: 'flex',
+            alignItems: 'center',
+            flexDirection: { xs: 'column', md: 'row' },
+            marginTop: 10,
+            marginBottom: 10,}}>      
+        <Container component='section' sx={{backgroundColor: 'transparent', maxWidth:"xl", alignItems: 'center', justifyContent: 'center', alignContent: 'center', textAlign: 'center'}}>
             <Grid container spacing={2}>
                 <Grid item xs={12}>
                   <Typography
