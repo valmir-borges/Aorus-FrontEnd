@@ -81,8 +81,8 @@ function DashBoardCatalogo() {
                         ))}
                     </Container>
                 ) : (
-                    <Typography variant="body1">
-                        Parece que você não possui nenhum produto cadastrado, <Link href={"cadastroProduct"}>cadastre um agora.</Link>
+                    <Typography variant="body1" sx={{ minHeight: '35vh', fontSize: 20 }}>
+                        Parece que você não possui nenhum produto cadastrado, <Link href={"cadastroProduct"}>Cadastre um agora!</Link>
                     </Typography>
                 )}
             </Container>

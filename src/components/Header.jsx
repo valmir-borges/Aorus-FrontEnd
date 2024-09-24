@@ -21,7 +21,7 @@ const settings = ['Perfil', 'Dashboard', 'Carrinho', 'Logout'];
 
 function Header() {
     const { Logout, dados } = useContext(AuthContext);
-    const [userPhoto, setUserPhoto] = useState('');
+    const [userPhoto, setUserPhoto] = useState();
     const navigate = useNavigate();
     const name = localStorage.getItem('name')
 
@@ -58,7 +58,6 @@ function Header() {
             setUserPhoto(json.image);
         })
         .catch(() => { 
-            // Consider adding error handling here
         });
     }, []);
 
@@ -75,7 +74,7 @@ function Header() {
                             src={Logo} 
                             style={{ width: '100%' }} 
                             alt="Logo"
-                            onClick={() => navigate('/')} // Redireciona para a home ao clicar na logo
+                            onClick={() => navigate('/')}
                         />
                     </Box>
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -131,7 +130,7 @@ function Header() {
                             src={Logo} 
                             style={{ width: '60%' }} 
                             alt="Logo" 
-                            onClick={() => navigate('/')} // Redireciona para a home ao clicar na logo
+                            onClick={() => navigate('/')}
                         />
                     </Box>
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
@@ -160,25 +159,24 @@ function Header() {
                         <Tooltip title="Open settings">
                             <IconButton 
                                 onClick={handleOpenUserMenu} 
-                                sx={{ p: 0, width: 60, height: 60 }} // Ajuste o tamanho do IconButton se necessário
+                                sx={{ p: 0, width: 60, height: 60 }}
                             >
                                 <Avatar
-                                    alt="Remy Sharp"
+                                    alt="Foto do Usuário"
                                     src={userPhoto}
-                                    sx={{ width: 60, height: 60 }} // Ajuste o tamanho do Avatar
+                                    sx={{ width: 60, height: 60 }} 
                                 />
                             </IconButton>
                         </Tooltip>
                         <Typography 
                             sx={{ 
-                                ml: 2, // Margem à esquerda do texto
-                                display: { xs: 'none', md: 'block' }, // Esconde o texto em telas menores que 728px
-                                fontSize: '1.3rem',
+                                ml: 2, 
+                                display: { xs: 'none', md: 'block' }, 
                                 color: 'white',
                             }}
                         >
-                            Olá, <Typography                             sx={{ 
-                                display: { xs: 'none', md: 'block' }, // Esconde o texto em telas menores que 728px
+                            Olá, <Typography sx={{ 
+                                display: { xs: 'none', md: 'block' },
                                 fontSize: '1.3rem',
                                 color: '#FF6400',
                                 fontWeight: 'bold'
