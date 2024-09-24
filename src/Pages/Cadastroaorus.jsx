@@ -121,7 +121,24 @@ function Cadastroaorus() {
                             onChange={(e) => setConfirmSenha(e.target.value)}
                             sx={{ background: "rgba(40,40,40,0.75)" }}
                         />
-                        <Button type='submit' variant="contained" fullWidth sx={{ mt: 2, mb: 2 }}>Cadastrar</Button>
+                        <Button
+                            type='submit'
+                            variant="outlined"
+                            fullWidth
+                            sx={{
+                                mt: 2,
+                                mb: 2,
+                                color: 'white',
+                                borderColor: '#FF6400',
+                                '&:hover': {
+                                backgroundColor: '#FF6400', 
+                                color: 'black',
+                                borderColor: '#FF6400',
+                                },
+                            }}
+                            >
+                            Cadastrar
+                        </Button>
                         <Grid container>
                             <Grid item xs>
                                 <Link href={"/Loginaorus"} sx={{color: 'white'}}>Já possuo uma conta</Link>

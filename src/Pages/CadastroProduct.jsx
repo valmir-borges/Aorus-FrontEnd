@@ -179,7 +179,24 @@ function CadastroPlaca() {
                 value={image}
                 onChange={(e) => setImage(e.target.value)}
               />
-              <Button type='submit' variant="contained" fullWidth sx={{ mt: 2, mb: 2 }}>Cadastrar</Button>
+            <Button
+              type='submit'
+              variant="outlined"
+              fullWidth
+              sx={{
+                mt: 2,
+                mb: 2,
+                color: 'white',
+                borderColor: '#FF6400',
+                '&:hover': {
+                  backgroundColor: '#FF6400', 
+                  color: 'black',
+                  borderColor: '#FF6400',
+                },
+              }}
+            >
+              Cadastrar
+            </Button>
             </Box>
           </Box>
         </Container>

@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import Product from "../components/Product";
 import { useEffect, useState } from "react";
 import Footer from "../components/Footer";
+import Style from '../css/global.css'
 
 function DashBoardCatalogo() {
     const [product, setProduct] = useState([]);

@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import Product from '../components/Product';
 import { Autocomplete, Button, Container, TextField, Typography } from "@mui/material";
 import Footer from '../components/Footer';
+import Style from '../css/global.css'
 
 function Catalogo() {
   const [product, setProduct] = useState([]);

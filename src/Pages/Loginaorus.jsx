@@ -57,7 +57,24 @@ function Loginaorus() {
                             control={<Checkbox checked={lembrar} onChange={() => setLembrar(!lembrar)} />}
                             label="Lembra-me"
                         />
-                        <Button type='submit' variant="contained" fullWidth sx={{ mt: 2, mb: 2 }}>Login</Button>
+                        <Button
+                            type='submit'
+                            variant="outlined"
+                            fullWidth
+                            sx={{
+                                mt: 2,
+                                mb: 2,
+                                color: 'white',
+                                borderColor: '#FF6400',
+                                '&:hover': {
+                                backgroundColor: '#FF6400', 
+                                color: 'black',
+                                borderColor: '#FF6400',
+                                },
+                            }}
+                            >
+                            Login
+                        </Button>                        
                         <Grid container>
                             <Grid item xs>
                                 Esqueci a senha

@@ -3,7 +3,7 @@ import React from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 
-import Style from '../css/home.module.css'
+import Style from '../css/global.css'
 import '../css/global.css'
 import Product from '../components/Product'
 import { useEffect } from 'react';
